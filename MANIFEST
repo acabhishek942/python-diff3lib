@@ -1,3 +1,5 @@
 README
 diff3lib.py
 setup.py
+tests/__init__.py
+tests/test_diff3.py

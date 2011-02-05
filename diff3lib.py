@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-
-"""This module provides you to compute difference sets between two
+'''
+This module provides you to compute difference sets between two
 or three texts ported from GNU diff3.c written by R. Smith.
 
 For users convenience, Text::Diff3 includes small diff procedure
@@ -17,7 +17,8 @@ Copyright (C) 2011 MIZUTANI Tociyuki
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2."""
+the Free Software Foundation; either version 2.
+'''
 
 def diff3(text0, text2, text1):
     """Calcurate three-way differences. This returns difference sets.
@@ -61,7 +62,8 @@ def diff3(text0, text2, text1):
     
         Three way file comparison program (diff3) for Project GNU.
         Copyright (C) 1988, 1989, 1992, 1993, 1994 Free Software Foundation, Inc.
-        Written by Randy Smith """
+        Written by Randy Smith
+    """
     
     range3_list = []
     range2_list = [diff(text2, text0), diff(text2, text1)]
@@ -149,7 +151,8 @@ def diff(a, b):
     where line numbers start from 1.
     
         P. Heckel. ``A technique for isolating differences between files.''
-        Communications of the ACM, Vol. 21, No. 4, page 264, April 1978."""
+        Communications of the ACM, Vol. 21, No. 4, page 264, April 1978.
+    """
 
     uniqs = [[len(a), len(b)]]
     freqs = {}
