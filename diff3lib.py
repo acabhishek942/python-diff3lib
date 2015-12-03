@@ -13,7 +13,7 @@ it happened quite differences in results.
 
 MIZUTANI Tociyuki <tociyuki@gmail.com>.
 
-Copyright (C) 2011 MIZUTANI Tociyuki
+Copyright (C) 2015 MIZUTANI Tociyuki
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -172,7 +172,14 @@ def diff(a, b):
             uniq_pair = (ap[s], bp[s])
             uniqs.append(uniq_pair)
     freqs = ap = bp = None
-    cmpf = lambda x, y: cmp(x[0], y[0])
+
+    def cmpf(x, y):
+        if x[0] < y[0] and x[1] < y[1]:
+            return -1
+        if x[0] == y[0] and x[1] == y[1]:
+            return 0
+        return +1
+
     uniqs.sort(cmpf)
 
     range2_list = []
